@@ -1,0 +1,434 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-weight: 400;
+  background-color: #eeeff4;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+.navbar {
+  background: #1833ff !important;
+  width: 100%;
+}
+.btn-outline-primary {
+  border-color: #1833ff;
+  color: #1833ff;
+}
+.btn-outline-primary:hover {
+  background-color: #1833ff;
+  color: #ffffff;
+}
+.vertical-center {
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  flex-direction: column;
+}
+.inner-block {
+  width: 450px;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  transition: all 0.3s;
+  border-radius: 20px;
+}
+.vertical-center .form-control:focus {
+  border-color: #2554ff;
+  box-shadow: none;
+}
+.vertical-center h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+label {
+  font-weight: 500;
+}
+
+/* Wallpaper */
+.cd-slider {
+  position: relative;
+  width: 100%;
+  height: 96vh;
+  overflow: hidden;
+}
+.cd-slider.ie9 .npbuttons div span {
+  display: none;
+}
+.cd-slider ul li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: visibility 0s 0.6s;
+}
+.cd-slider ul li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  width: 135vh;
+  height: 135vh;
+  border: solid rgba(0, 0, 0, 0.2);
+  border-width: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: border-width 0.4s 0.6s;
+}
+
+.content blockquote {
+  position: absolute;
+  bottom: 5%;
+  left: 4%;
+  z-index: 2;
+  max-width: 45%;
+}
+blockquote p {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+blockquote span {
+  font-size: 1.4rem;
+}
+
+.head_img {
+  margin-top: 20vh;
+  margin-bottom: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+}
+
+.head_txt {
+  color: #ff0076;
+  font-size: 66px;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 1;
+  margin-top: 36vh;
+}
+
+/* top-section */
+.top-section {
+  background: url(../images/car-4.jpg);
+  height: 30vh;
+  margin-bottom: 36px;
+  background-size: cover;
+  position: relative;
+}
+.top-section h1 {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  color: #0d6efd;
+}
+
+.admin-top-section {
+  background: rgb(39, 51, 59);
+  height: 16vh;
+  margin-bottom: 36px;
+  background-size: cover;
+  position: relative;
+}
+.admin-top-section h1 {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  color: #0d6efd;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main_container div {
+  display: flex;
+  /* background: mediumspringgreen; */
+}
+.main_container div div {
+  /* width: 50%; */
+}
+/* Back drop */
+.navlinks {
+  margin-bottom: 36px;
+  margin-left: 2vw;
+}
+
+.navlinks a {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  text-decoration: none;
+  color: white;
+  background-color: #741188;
+  padding: 0.25rem 1rem;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100000;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.model {
+  text-align: center;
+  position: fixed;
+  top: 30vh;
+  left: 10%;
+  width: 80%;
+  z-index: 100;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  font-size: 18px;
+  min-height: 150px;
+  padding: 10px 20px;
+}
+
+.model a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  text-decoration: none;
+  color: white;
+  background-color: #741188;
+  padding: 0.25rem 1rem;
+  margin-top: 36px;
+}
+
+.model a:hover {
+  background: #4f005f;
+}
+
+@media (min-width: 768px) {
+  .model {
+    left: calc(50% - 20rem);
+    width: 40rem;
+  }
+}
+
+/* CAR LISTING PAGE */
+
+.cars-section {
+  padding: 36px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-evenly;
+}
+
+.car-box {
+  width: 30%;
+  margin-bottom: 24px;
+  padding: 15px 16px;
+  background-color: #fff;
+}
+
+.car-name {
+  text-transform: uppercase;
+  color: black;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.car-details {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.car-details div {
+  width: 50%;
+
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.2);
+  display: block;
+  margin-bottom: 0;
+}
+
+.car-details .right {
+  text-align: right;
+}
+
+.car-details .right .price {
+  color: #1089ff;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: auto !important;
+}
+
+.book {
+  text-align: center;
+}
+
+.book-button {
+  background: #0d6efd;
+  color: #fff !important;
+  font-size: 24px;
+  padding: 0.24rem 0.6rem;
+  border: none;
+  border-radius: 6px;
+}
+
+.book-button:hover {
+  background: #01d28e;
+}
+
+.model-form {
+  display: flex;
+}
+
+.model-form div {
+  width: 50%;
+  padding: 8px 24px;
+}
+
+.logout {
+  display: none;
+}
+
+.name:hover + .logout {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .car-box {
+    width: auto;
+  }
+  .top-section h1 {
+    color: white;
+  }
+}
+
+/* FOOTER */
+
+.section3 {
+  background: #2e5d8d;
+  color: white;
+  padding: 20px;
+}
+.section3 .container div {
+  width: 33%;
+}
+.address1 {
+  margin-left: 20%;
+}
+.copyright {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section3 a {
+  color: white;
+}
+.section3 a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+/*------  BRAG SECTION  ------*/
+.brag-sec {
+  padding: 90px 10px;
+}
+.brag_cont {
+  display: flex;
+}
+.brag_cont div {
+}
+.brag_txt {
+  width: 40%;
+  padding: 86px;
+}
+.sp_txt {
+  color: #fd9529;
+}
+.brag_txt h2 {
+  font-size: 36px;
+  margin-bottom: 36px;
+}
+.brag_com {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.brag_com div {
+  margin-bottom: 30px;
+}
+.brag_right {
+  position: relative;
+
+  top: 36px;
+}
+
+.brag_div {
+  width: 280px;
+  height: 280px;
+  border: 1px solid #ff8179;
+  border-radius: 6px;
+  box-shadow: 6px 6px 11px 3px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+}
+.brag_points img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 66%;
+}
+
+.brag_div h3 {
+  font-size: revert;
+  text-align: center;
+}
+
+.card,
+.card-container {
+  box-shadow: 0px 14px 80px rgb(34 35 58 / 20%);
+  padding: 40px 55px 45px 55px;
+}
+
+@media (max-width: 768px) {
+  .brag_txt {
+    width: 100%;
+    padding: 86px;
+  }
+  .brag_cont {
+    display: block;
+  }
+}
+
+.admin_btn {
+  padding: 20px 10px;
+  background: mediumspringgreen;
+  color: midnightblue;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 60px;
+  font-size: 24px;
+  display: block;
+}
+.admin_btn:hover {
+  color: blue;
+  text-decoration: none;
+}
